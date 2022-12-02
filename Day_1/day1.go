@@ -15,9 +15,7 @@ func ReadInts(r io.Reader) ([]int, error) {
 	var result []int
 	for scanner.Scan() {
 		if len(scanner.Text()) == 0 {
-
 			result = append(result, 0)
-
 		} else {
 			x, err := strconv.Atoi(scanner.Text())
 			if err != nil {
@@ -52,9 +50,7 @@ func main() {
 	running := 0
 
 	for _, val := range ints {
-
 		if val == 0 {
-
 			if running > ans {
 				ans = running
 			}
@@ -62,18 +58,15 @@ func main() {
 		} else {
 			running += val
 		}
-
 	}
 
 	fmt.Println(ans)
 
 	var totals []int
-
 	running = 0
 
 	for _, val := range ints {
 		if val == 0 {
-
 			totals = append(totals, running)
 			running = 0
 		} else {
